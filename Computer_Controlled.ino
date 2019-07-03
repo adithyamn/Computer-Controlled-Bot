@@ -11,14 +11,14 @@ int e2 = 14;
 int w1 = 15;
 int w2 = 16;
 
-void Forward()
+void Forward() //moves forward
 {
   digitalWrite(lm1,1);
   digitalWrite(lm2,0);
   digitalWrite(rm1,1);
   digitalWrite(rm2,0);
 }
-void Stop()
+void Stop() //Stops
 {
   digitalWrite(lm1,0);
   digitalWrite(lm2,0);
@@ -31,43 +31,43 @@ void Stop()
   digitalWrite(w2,0);
   
 }
-void Reverse()
+void Reverse() //Moves backward
 {
   digitalWrite(lm1,0);
   digitalWrite(lm2,1);
   digitalWrite(rm1,0);
   digitalWrite(rm2,1);
 }
-void Right()
+void Right() //takes right turn
 {
   digitalWrite(lm1,1);
   digitalWrite(lm2,0);
   digitalWrite(rm1,0);
   digitalWrite(rm2,1);
 }
-void Left()
+void Left() //takes left turn
 {
   digitalWrite(lm1,0);
   digitalWrite(lm2,1);
   digitalWrite(rm1,1);
   digitalWrite(rm2,0);
 }
-void elup()
+void elup() //Gripper Elbow up
 {
   digitalWrite(e1,1);
   digitalWrite(e2,0);
 }
-void eldo()
+void eldo() //Gripper Elbow Down
 {
   digitalWrite(e1,0);
   digitalWrite(e2,1);
 }
-void armup()
+void wopen() //Gripper wrist open
 {
   digitalWrite(w1,1);
   digitalWrite(w2,0);
 }
-void armdo()
+void wclose() //Gripper Wrist Close
 {
   digitalWrite(w1,0);
   digitalWrite(w2,1);
@@ -129,10 +129,10 @@ void loop() {
   eldo();
   
   if(c=='j')
-  armup();
+  wopen();
   
   if(c=='l')
-  armdo();
+  wclose();
   
   
   }
